@@ -1,0 +1,17 @@
+octocat:
+  name: EXAMPLE octocat
+  title: Octocat
+  url: https://github.com/octocat
+  image_url: https://github.com/octocat.png
+
+fisher:
+  name: fisher
+  title: Docs Maintainer
+  url: https://github.com/fisherjacobc
+  image_url: https://github.com/fisherjacobc.png
+
+jake:
+  name: jake
+  title: Huxley Co-Owner
+  url: https://github.com/jake0477
+  image_url: https://github.com/jake0477.png
