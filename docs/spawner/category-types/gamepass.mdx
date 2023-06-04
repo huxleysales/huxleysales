@@ -1,0 +1,26 @@
+---
+id: gamepass
+title: Gamepass
+---
+
+Example Configuration:
+
+```lua
+{
+	title = "My Category",
+    // highlight-next-line
+	categoryType = "gamepass",
+    // highlight-next-line
+    assetId = 12345678,
+}
+```
+
+To set a category to a gamepass - set the `categoryType` to `"gamepass"`
+
+Then, set your `assetId` to the gamepass Id of the gamepass
+
+:::note
+
+Type gamepass makes it so anyoen with a certain gamepass owned can spawn a bus
+
+:::

@@ -32,24 +32,36 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        indexDocs: true,
+        indexBlog: true,
+        indexPages: true,
+        language: "en",
+        maxSearchResults: 10,
+        // style:
+      }
+    ],
+  ],
+
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars/main.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+        blog: {
+          showReadingTime: true,
           editUrl:
             'https://github.com/huxleysales/website',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/huxleysales/website',
+        docs: {
+          path: 'docs',
+          sidebarPath: 'sidebars.js',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          editCurrentVersion: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -62,26 +74,26 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      algolia: {
-        // The application ID provided by Algolia
-        appId: 'OPZUAAFIIO',
+      // algolia: {
+      //   // The application ID provided by Algolia
+      //   appId: 'OPZUAAFIIO',
 
-        // Public API key: it is safe to commit it
-        apiKey: '6b771e57a2b846a30ad28a619c9d62f7',
+      //   // Public API key: it is safe to commit it
+      //   apiKey: '6b771e57a2b846a30ad28a619c9d62f7',
 
-        indexName: 'huxley',
+      //   indexName: 'huxley',
 
-        // Optional: see doc section below
-        contextualSearch: true,
+      //   // Optional: see doc section below
+      //   contextualSearch: true,
 
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: 'external\\.com|domain\\.com',
+      //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      //   externalUrlRegex: 'external\\.com|domain\\.com',
 
-        // Optional: Algolia search parameters
-        searchParameters: {},
+      //   // Optional: Algolia search parameters
+      //   searchParameters: {},
 
-        //... other Algolia params
-      },
+      //   //... other Algolia params
+      // },
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Huxley Sales',
@@ -90,13 +102,34 @@ const config = {
           src: 'img/huxleysales.png',
         },
         items: [
+          // {
+          //   type: 'doc',
+          //   docId: 'index',
+          //   position: 'left',
+          //   label: 'Docs',
+          // },
           {
-            type: 'doc',
-            docId: 'index',
-            position: 'left',
+            type: 'dropdown',
             label: 'Docs',
+            position: 'left',
+            items: [
+              {
+                type: 'docSidebar',
+                label: 'School Buses',
+                sidebarId: 'buses',
+              },
+              {
+                type: 'docSidebar',
+                label: 'Bus Spawner',
+                sidebarId: 'spawner',
+              },
+            ]
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            href: '/blog', 
+            label: 'Blog', 
+            position: 'left'
+          },
           {
             href: 'https://discord.gg/yHH2cynGzD',
             label: 'Discord',
@@ -121,8 +154,16 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'School & Transit Buses',
+                to: '/docs/buses'
+              },
+              {
+                label: 'Products',
+                to: '/docs/products'
+              },
+              {
+                label: 'Bus Spawner',
+                to: '/docs/spawner'
               },
             ],
           },
@@ -130,16 +171,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Roblox',
+                href: 'https://www.roblox.com/groups/16419590/Huxley-Sales#!/about',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://discord.gg/yHH2cynGzD',
               },
             ],
           },
@@ -152,7 +189,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/huxleysales',
               },
             ],
           },
@@ -162,9 +199,9 @@ const config = {
       announcementBar: {
         id: 'discord',
         content:
-          'This documentation is in ongoing progress | Need help? <strong><a href="https://discord.gg/yHH2cynGzD">Join our discord!</strong></a>',
-        backgroundColor: '#0000001a',
-        textColor: '#5f98c0',
+          '<strong> This documentation is in ongoing progress | Need help? <a href="https://discord.gg/yHH2cynGzD">Join our discord!</a></strong>',
+        // backgroundColor: '#131314',
+        // textColor: '#25c2a0',
         isCloseable: false,
       },
       prism: {

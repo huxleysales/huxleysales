@@ -1,0 +1,27 @@
+---
+id: lights
+title: How do I make a light LED or Incandescent?
+---
+
+![Help Image](/img/docs/buses/lights.png)
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+Under `Lighting` in `BusSettings` there is a list of lights
+
+<Tabs>
+  <TabItem value="inc" label="For Incandescent Lights" default>
+    To make a light Incandescent change it to <code>"INC"</code>, then go to the
+    lights you want to be Incandescent duplicate it, make it neon, make sure it
+    dose not glitch with the original part, then make the neon part{" "}
+    <code>transparency</code> 1. Take the original part and move it out of the
+    light model.
+  </TabItem>
+  <TabItem value="led" label="For LED Lights">
+    To make a light LED change it to "LED", then go to the light you want to be
+    LED; if there is a part that is neon and is transparent in front of the
+    light delete it. Then take the back part put it into the light model, make
+    sure its <code>SmoothPlastic</code> and <code>transparency</code> 0.
+  </TabItem>
+</Tabs>
