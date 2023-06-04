@@ -1,0 +1,213 @@
+---
+id: webhook
+title: Webhook Setup
+---
+
+:::caution NOTICE!
+
+If you were brought to this page after purchasing the `Bus Spawner Webhook Access` product, please make a Spawner support ticket.
+
+:::
+
+:::info
+
+If you want to use the webhook system, you must first purchase the `Bus Spawner Webhook Access` from the [product hub](https://www.roblox.com/games/refer?PlaceId=11746877837&PageType=GroupDetail&LocalTimestamp={localTimestamp}).
+
+Then, please make a Spawner support ticket.
+
+:::
+
+## Background info
+
+To maximize usability, uptime, and reliability. It is up to **you** to self-host the service that sends the webhooks. But don't worry, all the instructions and code is provided!
+
+## Service Setup (Back-End)
+
+First, you need to make an account at https://www.cloudflare.com/ if you don't already have one. Dont worry, this is a trusted website used by millions of websites and services, such as Discord. Eventually, you should reach the dashboard page (see below).
+
+![Dashboard](/img/docs/spawner/webhook/dashboard.png)
+
+Next, click on the Workers page on the left sidebar (as displayed in the image above). Then, click the **`Create application`** button. Don't worry if you don't already have any created.
+
+![Workers page](/img/docs/spawner/webhook/workersdashboard.png)
+
+Make sure you are selecting `Worker`, and then click **`Create Worker`**
+
+![Create worker](/img/docs/spawner/webhook/createworker.png)
+
+Next, you need to name your worker, and make sure you remember the name and full link. Don't worry though, if you forget it, Cloudflare will still have the name!
+
+![Name worker](/img/docs/spawner/webhook/deployworker.png)
+
+Then, click **`Deploy`**!
+
+You are almost done with this part!
+
+![Worker deployed](/img/docs/spawner/webhook/workerdeployed.png)
+
+You still need to edit the code, you should be at the page where it gives you the option to edit the code, so click on that. Copy and paste the code below, and replace the current code in the box on the left. You can watch the video demonstration below!
+
+<video controls playsinline style={{ maxWidth: "100%" }}>
+  <source src="/video/docs/spawner/webhook/code.mp4" type="video/mp4" />
+</video>
+
+```js showLineNumbers title="worker.js"
+"use strict";
+(() => {
+  // dist/worker.js
+  (() => {
+    "use strict";
+    var __webpack_modules__ = {
+      "./src/handler.ts": (__unused_webpack_module, exports) => {
+        Object.defineProperty(exports, "__esModule", { value: true });
+        exports.handleRequest = void 0;
+        function getParam(name, url) {
+          name = name.replace(/[[\]]/g, "\\$&");
+          name = name.replace(/\//g, "");
+          const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+          if (!results) return null;
+          else if (!results[2]) return "";
+          else if (results[2]) {
+            results[2] = results[2].replace(/\//g, "");
+          }
+          return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+        async function handleRequest(request) {
+          if (request.url.includes("/post") && request.method == "POST") {
+            let jsonBody = null;
+            if (request.body) jsonBody = await request.json();
+            const url = getParam("webhookurl", request.url);
+            if (!jsonBody) return new Response("Missing Body", { status: 400 });
+            if (!url)
+              return new Response("Missing Webhook URL", { status: 400 });
+            try {
+              const req = await fetch(url, {
+                method: "post",
+                body: JSON.stringify(jsonBody),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              });
+              if (req.status && req.status == 204)
+                return new Response(null, {
+                  status: 204,
+                });
+              return new Response(
+                `Request Sent! You should see if it sent or not (if status code is not in the 200 range then something went wrong)`,
+                {
+                  status: req.status || 200,
+                }
+              );
+            } catch (error) {
+              return new Response(`Error - Message: ${error}`, { status: 500 });
+            }
+          } else if (
+            request.url.includes("/webhookinfo") &&
+            request.method == "GET"
+          ) {
+            const url = getParam("webhookurl", request.url);
+            if (!url)
+              return new Response("Missing Webhook URL", { status: 400 });
+            try {
+              const req = await fetch(url);
+              return new Response(JSON.stringify(await req.json()), {
+                status: req.status,
+              });
+            } catch (error) {
+              return new Response(`Error - Message: ${error}`, { status: 500 });
+            }
+          } else if (
+            request.url.includes("/thumb") &&
+            request.method == "GET"
+          ) {
+            const userId = getParam("userId", request.url);
+            if (!userId)
+              return new Response("Missing User ID", { status: 400 });
+            const thumbType = getParam("type", request.url);
+            if (!thumbType)
+              return new Response("Missing Thumbnail Type", { status: 400 });
+            try {
+              let req = null;
+              if (thumbType == "0") {
+                req = await fetch(
+                  `https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=${userId}&size=420x420&format=Png&isCircular=false`
+                );
+              } else {
+                req = await fetch(
+                  `https://thumbnails.roblox.com/v1/users/avatar-bust?userIds=${userId}&size=420x420&format=Png&isCircular=false`
+                );
+              }
+              return new Response((await req.json()).data[0].imageUrl, {
+                status: req.status,
+              });
+            } catch (error) {
+              return new Response(`Error - Message: ${error}`, { status: 500 });
+            }
+          } else {
+            return new Response("Uh oh!", { status: 404 });
+          }
+        }
+        exports.handleRequest = handleRequest;
+      },
+    };
+    var __webpack_module_cache__ = {};
+    function __webpack_require__(moduleId) {
+      var cachedModule = __webpack_module_cache__[moduleId];
+      if (cachedModule !== void 0) {
+        return cachedModule.exports;
+      }
+      var module = (__webpack_module_cache__[moduleId] = {
+        exports: {},
+      });
+      __webpack_modules__[moduleId](
+        module,
+        module.exports,
+        __webpack_require__
+      );
+      return module.exports;
+    }
+    var __webpack_exports__ = {};
+    (() => {
+      var exports = __webpack_exports__;
+      Object.defineProperty(exports, "__esModule", { value: true });
+      const handler_1 = __webpack_require__("./src/handler.ts");
+      addEventListener("fetch", (event) => {
+        event.respondWith(handler_1.handleRequest(event.request));
+      });
+    })();
+  })();
+})();
+//# sourceMappingURL=worker.js.map
+```
+
+Last, but not least. Click on **`Save & Deploy`**, and you are done with this part!
+
+![Worker finished and deployed](/img/docs/spawner/webhook/saveanddeploy.png)
+
+Now, for the next part of this setup, have that full `https://workers.dev` link handy!
+
+## Roblox Studio Setup
+
+### Bot & Discord Webhook
+
+First, you need to invite the `Bus Spawner Webhook` bot (you can ping it in the Huxley Sales server) and invite it. You already should have been added to the system, so now in your own server, do `/generate-webhook` and specify the channel. It should now give you a Discord webhook link.
+
+:::caution NOTICE!
+
+If it doesn't let you generate one, make a ticket in the Discord server.
+
+If the bot doesn't respond, please notify fisher#8036 on Discord.
+
+The webhook you put in the spawner configuration **MUST** be generated by the Discord bot, or else the spawner will reject it. (It knows :O)
+
+:::
+
+### Spawner Configuration
+
+Look for the `webhookSettings` options in the spawner configuration. Make the following edits:
+
+- Set `webhookServerUrl` to the full `https://workers.dev` you have from earlier.
+- Set `webhookClientUrl` to the Discord webhook generated by the Discord bot.
+
+Now, you are done!

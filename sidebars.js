@@ -49,6 +49,7 @@ const sidebars = {
         },
         'spawner/advanced-spawning',
         'spawner/bus-teleport',
+        'spawner/webhook',
         'spawner/typings'
     ]
 }

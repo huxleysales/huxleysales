@@ -3,4 +3,14 @@ id: bus-teleport
 title: Teleporting to your Bus when Spawned
 ---
 
-## docs coming soon for this
+## Enabling bus teleports
+
+First, make sure that `teleportPlayerToBus` is set to `true` in your spawner configuration
+
+## Setting it up in the bus
+
+1. Make a basic part, and set the `transparency` to 0 and anchored.
+2. Make sure that part is named `SPWNR_TELEPORT`, this is vital!
+3. Place that part where you want, and make sure it is inside the `Body` of the bus (should be the same for GenX, GX+, Huxley, and other buses)
+
+Now it is done! You may duplicate this part and make it so you can teleport to all your buses in your fleet!

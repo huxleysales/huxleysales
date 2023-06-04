@@ -7,7 +7,7 @@ title: Configuration
 
 We provided you with an example configuration file if needed.
 
-```lua showLineNumbers tile="SpawnerConfig"
+```lua showLineNumbers title="SpawnerConfig"
 --!strict
 local Typings = require(game:GetService'ReplicatedStorage'.Spawner.SpawnerTypings);
 
@@ -15,7 +15,10 @@ local Typings = require(game:GetService'ReplicatedStorage'.Spawner.SpawnerTyping
 
 ONLY EDIT THE CONFIG TABLE!
 
-Need help? Visit https://docs.tyra.digital/docs/rbx-products/bus-spawner/configuration/
+Need help? Visit
+
+https://huxleysales.github.io/docs/spawner/config
+or join https://discord.gg/yHH2cynGzD
 
 ]]
 
@@ -35,20 +38,152 @@ local config: Typings.Config = {
 
 	groupSettings = {
 		enabled = false,
-		groupId = 13299030,
+		groupId = 16419590,
 		minimumSpawnerRank = 0,
 		minimumAdminRank = 250,
 		allowVipOwnersServerAdmin = false
 	},
 
 	webhookSettings = {
-		enabled = false,
+		enabled = true,
 		receiver = "discord",
-		url = "https://canary.discord.com/api/webhooks/"
+		webhookServerUrl = "",
+		webhookClientUrl = "",
+		bodies = {
+			onSpawn = {
+				username = "{{spawnerTitle}}",
+				embeds = {
+					{
+						title = "**Bus Spawned**",
+						description = "A bus was spawned",
+						color = tonumber(0x9acd32),
+						author = {
+							name = "{{spawnerTitle}}"
+						},
+						thumbnail = {
+							url = "{{userAvatarHeadShot}}"
+						},
+						fields = {
+							{
+								name = "Bus Spawned",
+								value = "{{busNumber}}",
+							},
+							{
+								name = "Bus Spawned by",
+								value = "[{{displayName}} (@{{username}})](https://roblox.com/users/{{userId}}/profile)"
+							},
+							{
+								name = "Bus Spawned at",
+								value = "<t:{{timestamp}}> (<t:{{timestamp}}:R>)"
+							}
+						}
+					}
+				}
+			},
+			onDespawn = {
+				username = "{{spawnerTitle}}",
+				embeds = {
+					{
+						title = "**Bus Despawned**",
+						description = "A bus was despawned",
+						author = {
+							name = "{{spawnerTitle}}"
+						},
+						thumbnail = {
+							url = "{{userAvatarHeadShot}}"
+						},
+						color = tonumber(0x3c78d8),
+						fields = {
+							{
+								name = "Bus Despawned",
+								value = "{{busNumber}}"
+							},
+							{
+								name = "Bus Despawned by",
+								value = "[{{displayName}} (@{{username}})](https://roblox.com/users/{{userId}}/profile)"
+							},
+							{
+								name = "Bus Despawned at",
+								value = "<t:{{timestamp}}> (<t:{{timestamp}}:R>)"
+							}
+						}
+					}
+				}
+			},
+			onMessage = {
+				username = "{{spawnerTitle}}",
+				embeds = {
+					{
+						title = "**notification Broadcasted**",
+						description = "Someone sent a notification!",
+						color = tonumber(0x3c78d8),
+						author = {
+							name = "{{spawnerTitle}}"
+						},
+						thumbnail = {
+							url = "{{userAvatarHeadShot}}"
+						},
+						fields = {
+							{
+								name = "notifiction Broadcasted by",
+								value = "[{{displayName}} (@{{username}})](https://roblox.com/users/{{userId}}/profile)"
+							},
+							{
+								name = "notification Broadcasted at",
+								value = "<t:{{timestamp}}> (<t:{{timestamp}}:R>)"
+							},
+							{
+								name = "notification Type",
+								value = "{{messageType}}"
+							},
+							{
+								name = "notification",
+								value = "{{message}}"
+							}
+						}
+					}
+				}
+			},
+			onAdmin = {
+				username = "{{spawnerTitle}}",
+				embeds = {
+					{
+						title = "**Administrative Action**",
+						description = "Someone executed something on the admin panel",
+						color = tonumber(0xff4848),
+						author = {
+							name = "{{spawnerTitle}}"
+						},
+						fields = {
+							{
+								name = "Executed by",
+								value = "[{{displayName}} (@{{username}})](https://roblox.com/users/{{userId}}/profile)"
+							},
+							{
+								name = "Executed at",
+								value = "<t:{{timestamp}}> (<t:{{timestamp}}:R>)"
+							},
+							{
+								name = "Executed towards",
+								value = "[{{moderatedDisplayName}} (@{{moderatedUsername}})](https://roblox.com/users/{{moderatedUserId}}/profile)"
+							},
+							{
+								name = "Action",
+								value = "{{action}}"
+							},
+							{
+								name = "Reason",
+								value = "{{reason}}"
+							}
+						}
+					}
+				}
+			}
+		}
 	},
 
 	busModelsLocation = game.ServerStorage.BusModels,
-	depsawnOnPlayerLeave = false,
+	depsawnonPlayerLeave = false,
 	teleportPlayerToBus = false,
 	busModelSpawnType = "basic"
 }
@@ -60,15 +195,16 @@ return config;
 
 ### Basic Configuration Options
 
-| Name                                           |                                                               Description                                                                |                                                                               Type |                                                  Value Choices |                   DefaultValue |
-| :--------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------: | ---------------------------------------------------------------------------------: | -------------------------------------------------------------: | -----------------------------: |
-| [theme](#theme-configuration-options)          | Includes all the data for your theme such as a title, custom logo image, and color themes! (Blue & Dark Theme are the best :sunglasses:) |                  [ThemeConfig](/docs/rbx-products/bus-spawner/typings#themeconfig) |    [View this for value choices](#theme-configuration-options) |                                |
-| [categories](#category-configuration-options)  |                                          Includes all the data about the different categories.                                           |          [CategoryConfigs](/docs/rbx-products/bus-spawner/typings#categoryconfigs) | [View this for value choices](#category-configuration-options) |                                |
-| [groupSettings](#gr oup-configuration-options) |                                Includes all the data about your group and group settings for the spawner.                                |                  [GroupConfig](/docs/rbx-products/bus-spawner/typings#groupconfig) |    [View this for value choices](#group-configuration-options) |                                |
-| busModelsLocation                              |                                       If you want to add more spawner categories (up-to 3 extra).                                        | Path to [`Folder`](https://create.roblox.com/docs/reference/engine/classes/Folder) |                                           Any folder in `game` | `game.ServerStorage.BusModels` |
-| depsawnOnPlayerLeave                           |                             If you want a spawned bus to despawn when the associated player leaves the game                              |                                                                            boolean |                                                 `true`/`false` |                        `false` |
-| teleportPlayerToBus                            |                                     If you want to teleport a player to their bus when they spawn it                                     |                                                                            boolean |                                                 `true`/`false` |                        `false` |
-| busModelSpawnType                              |       The method of spawning a bus - if using advanced, see [Advanced Spawning](/docs/rbx-products/bus-spawner/advanced-spawning)        |                                                                             string |                                         `"basic"`/`"advanced"` |                      `"basic"` |
+| Name                                              |                                                               Description                                                                |                                                                               Type |                                                  Value Choices |                   DefaultValue |
+| :------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------: | ---------------------------------------------------------------------------------: | -------------------------------------------------------------: | -----------------------------: |
+| [theme](#theme-configuration-options)             | Includes all the data for your theme such as a title, custom logo image, and color themes! (Blue & Dark Theme are the best :sunglasses:) |                  [ThemeConfig](/docs/rbx-products/bus-spawner/typings#themeconfig) |    [View this for value choices](#theme-configuration-options) |                                |
+| [categories](#category-configuration-options)     |                                          Includes all the data about the different categories.                                           |          [CategoryConfigs](/docs/rbx-products/bus-spawner/typings#categoryconfigs) | [View this for value choices](#category-configuration-options) |                                |
+| [groupSettings](#group-configuration-options)     |                                Includes all the data about your group and group settings for the spawner.                                |                  [GroupConfig](/docs/rbx-products/bus-spawner/typings#groupconfig) |  [View this for value choices](#webhook-configuration-options) |                                |
+| [webhookSettings](#webhook-configuration-options) |                                    Includes all the data about your webhook settings for the spawner.                                    |              [WebhookConfig](/docs/rbx-products/bus-spawner/typings#webhookconfig) |  [View this for value choices](#webhook-configuration-options) |                                |
+| busModelsLocation                                 |                                       If you want to add more spawner categories (up-to 3 extra).                                        | Path to [`Folder`](https://create.roblox.com/docs/reference/engine/classes/Folder) |                                           Any folder in `game` | `game.ServerStorage.BusModels` |
+| depsawnonPlayerLeave                              |                             If you want a spawned bus to despawn when the associated player leaves the game                              |                                                                            boolean |                                                 `true`/`false` |                        `false` |
+| teleportPlayerToBus                               |                                     If you want to teleport a player to their bus when they spawn it                                     |                                                                            boolean |                                                 `true`/`false` |                        `false` |
+| busModelSpawnType                                 |       The method of spawning a bus - if using advanced, see [Advanced Spawning](/docs/rbx-products/bus-spawner/advanced-spawning)        |                                                                             string |                                         `"basic"`/`"advanced"` |                      `"basic"` |
 
 ### Theme Configuration Options
 
@@ -84,20 +220,21 @@ return config;
 
 | Name                   | Required |             Description             |                                                                    Type |
 | :--------------------- | :------- | :---------------------------------: | ----------------------------------------------------------------------: |
-| [Category1](#category) | YES      | Includes all the data for Category1 | [CategoryConfig](/docs/rbx-products/bus-spawner/typings#categoryconfig) |
-| [Category2](#category) | NO       | Includes all the data for Category2 | [CategoryConfig](/docs/rbx-products/bus-spawner/typings#categoryconfig) |
-| [Category3](#category) | NO       | Includes all the data for Category3 | [CategoryConfig](/docs/rbx-products/bus-spawner/typings#categoryconfig) |
-| [Category4](#category) | NO       | Includes all the data for Category4 | [CategoryConfig](/docs/rbx-products/bus-spawner/typings#categoryconfig) |
+| [Category1](#category) | yes      | Includes all the data for Category1 | [CategoryConfig](/docs/rbx-products/bus-spawner/typings#categoryconfig) |
+| [Category2](#category) | no       | Includes all the data for Category2 | [CategoryConfig](/docs/rbx-products/bus-spawner/typings#categoryconfig) |
+| [Category3](#category) | no       | Includes all the data for Category3 | [CategoryConfig](/docs/rbx-products/bus-spawner/typings#categoryconfig) |
+| [Category4](#category) | no       | Includes all the data for Category4 | [CategoryConfig](/docs/rbx-products/bus-spawner/typings#categoryconfig) |
+| [Category5](#category) | no       | Includes all the data for Category4 | [CategoryConfig](/docs/rbx-products/bus-spawner/typings#categoryconfig) |
 
 #### Category
 
 | Name         | Required |                         Description                         |   Type |                                                                   Value Choices |                            DefaultValue |
 | :----------- | :------- | :---------------------------------------------------------: | -----: | ------------------------------------------------------------------------------: | --------------------------------------: |
-| title        | YES      |                   Title of this category                    | string |                                                                      Any string | `nil` unless first - then `"Spawn Bus"` |
-| categoryType | YES      |                      The Category Type                      | number | [CategoryTypeOption](/docs/rbx-products/bus-spawner/typings#categorytypeoption) |      `nil` unless first - then `"open"` |
-| assetId      | NO       |            The asset ID to access this category             | number |                                                                      Any number |                                   `nil` |
-| mypodProduct | NO       | The Product Name for your mypod hub to access this category | string |                                                                      Any String |                                   `nil` |
-| minimumRank  | NO       |         Minimum Group Rank to access this category          | number |                                                                      Any number |                                   `nil` |
+| title        | yes      |                   Title of this category                    | string |                                                                      Any string | `nil` unless first - then `"Spawn Bus"` |
+| categoryType | yes      |                      The Category Type                      | number | [CategoryTypeOption](/docs/rbx-products/bus-spawner/typings#categorytypeoption) |      `nil` unless first - then `"open"` |
+| assetId      | no       |            The asset ID to access this category             | number |                                                                      Any number |                                   `nil` |
+| mypodProduct | no       | The Product Name for your mypod hub to access this category | string |                                                                      Any String |                                   `nil` |
+| minimumRank  | no       |         Minimum Group Rank to access this category          | number |                                                                      Any number |                                   `nil` |
 
 ### Group Configuration Options
 
@@ -108,3 +245,19 @@ return config;
 | minimumSpawnerRank        |      Minimum Group Rank to see the spawner      |  number |     Any number |          `1` |
 | minimumAdminRank          |    Minimum Group Rank to see the admin panel    |  number |     Any number |        `255` |
 | allowVipOwnersServerAdmin | If VIP Server Owners should see the admin panel | boolean | `true`/`false` |      `false` |
+
+### Webhook Configuration Options
+
+| Name             |                        Description                         |         Type |  Value Choices | DefaultValue |
+| :--------------- | :--------------------------------------------------------: | -----------: | -------------: | -----------: |
+| enabled          |      If any of these webhook features should be used       |      boolean | `true`/`false` |      `false` |
+| receiver         | What system is receiving the webhook (most likely discord) |       number |                |  `"discord"` |
+| webhookServerUrl |           The Server/Service URL for the Webhook           |       string |     Any string |         `""` |
+| webhookServerUrl |                      The Webhook URL                       |       string |     Any string |         `""` |
+| bodies           |                    The templates/bodies                    | [string]: {} |     Any object |              |
+
+:::tip `bodies`
+
+You should not touch the names of the bodies (`onSpawn`, `onMessage`, etc...) but you can touch the contents inside of those names.
+
+:::tip
