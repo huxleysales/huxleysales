@@ -26,7 +26,8 @@ const sidebars = {
               'buses/speccing/lights'
             ],
         },
-        'buses/community-pictures'
+        'buses/community-pictures',
+        'buses/importing-buses'
     ],
     spawner: [
         'spawner/Introduction',
