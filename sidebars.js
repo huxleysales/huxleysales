@@ -26,8 +26,19 @@ const sidebars = {
               'buses/speccing/lights'
             ],
         },
-        'buses/community-pictures',
-        'buses/importing-buses'
+        {
+          type: 'category',
+          label: 'ROBLOX Studio Help',
+          link: {
+            type: 'generated-index',
+          },
+          collapsed: false,
+          items: [
+            'buses/studio-help/importing-buses',
+          'buses/studio-help/importing-sounds'
+          ],
+      },
+        'buses/community-pictures'
     ],
     spawner: [
         'spawner/Introduction',
