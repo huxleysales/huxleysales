@@ -21,8 +21,11 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
       - name: Build website
         run: npm run build
+        env:
+          HUB_SECRET_KEY: ${{ secrets.HUB_SECRET_KEY }}
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
@@ -39,5 +42,3 @@ jobs:
           # You can swap them out with your own user credentials.
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
-        env:
-          HUB_SECRET_KEY: ${{ secrets.HUB_SECRET_KEY }}
