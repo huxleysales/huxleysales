@@ -1,7 +1,7 @@
 ---
 slug: busplans
 title: June/July Bus Plans
-authors: [lad,nick]
+authors: [lad]
 tags: [Development, General]
 ---
 
