@@ -1,5 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+require('dotenv').config();
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
@@ -9,6 +10,10 @@ const config = {
   title: 'Huxley Sales',
   tagline: 'Welcome to Huxley Sales. We are a ROBLOX sales group that sells Developer Assets mainly based on school buses. Huxley Sales offers many different buses and parts for customization. Feel free to check out our variety of different assets.',
   favicon: 'img/favicon.ico',
+  
+  customFields: {
+    hubSecret: process.env.HUB_SECRET_KEY
+  },
 
   // Set the production url of your site here
   url: 'https://huxleysales.github.io',
@@ -45,6 +50,17 @@ const config = {
         // style:
       }
     ],
+      async function myPlugin(context, options) {
+        return {
+          name: "docusaurus-tailwindcss",
+          configurePostCss(postcssOptions) {
+            // Appends TailwindCSS and AutoPrefixer.
+            postcssOptions.plugins.push(require("tailwindcss"));
+            postcssOptions.plugins.push(require("autoprefixer"));
+            return postcssOptions;
+          },
+        };
+      },
   ],
 
   presets: [
@@ -109,6 +125,11 @@ const config = {
           //   position: 'left',
           //   label: 'Docs',
           // },
+          {
+            href: '/products', 
+            label: 'Products', 
+            position: 'left'
+          },
           {
             type: 'dropdown',
             label: 'Docs',

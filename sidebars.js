@@ -35,9 +35,9 @@ const sidebars = {
           collapsed: false,
           items: [
             'buses/studio-help/importing-buses',
-          'buses/studio-help/importing-sounds'
+            'buses/studio-help/importing-sounds'
           ],
-      },
+        },
         'buses/community-pictures'
     ],
     spawner: [
