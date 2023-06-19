@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkhuxley_website=self.webpackChunkhuxley_website||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"First ever blog!!","permalink":"/blog/firstblog"},{"title":"June/July Bus Plans","permalink":"/blog/busplans"}]}')}}]);
