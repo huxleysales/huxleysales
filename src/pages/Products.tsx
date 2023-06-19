@@ -80,7 +80,7 @@ export default function Products(): JSX.Element {
                 {data.products.map((product) => (
                     <a className="flex flex-col justify-center aspect-video drop-shadow-md min-h-[8rem]" href={`https://www.roblox.com/games/start?placeId=11746877837&launchData=${product.productID}`} target="_blank" style={{"textDecoration": "none"}}>
                         <img src={product.decalUrl} className="h-full absolute overflow-clip left-0 right-0 mx-auto rounded-md"/>
-                        <div className="z-10 flex flex-col rounded-md justify-end bg-gradient-to-t from-orange-500 to-transparent w-full h-full">
+                        <div className="z-10 flex flex-col rounded-md justify-end bg-gradient-to-t from-cyan-500 to-transparent w-full h-full">
                             <span className="w-[100%] p-2 text-3xl font-black dark:text-gray-50 text-gray-950 text-center">{product.name}</span>
                             <span className="mb-2 mx-8 md:mx-24 lg:mx-28 xl:mx-24 2xl:mx-40 bg-gray-50 dark:bg-gray-950 rounded-md ring-2 ring-green-500 text-2xl font-semibold text-green-500 text-center"><span className="font-bold">R$ </span>{product.price}</span>
                         </div>
