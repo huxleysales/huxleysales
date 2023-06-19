@@ -28,15 +28,5 @@
             <category>Off-Topic</category>
             <category>General</category>
         </item>
-        <item>
-            <title><![CDATA[June/July Bus Plans]]></title>
-            <link>https://huxleysales.github.io/blog/busplans</link>
-            <guid>https://huxleysales.github.io/blog/busplans</guid>
-            <pubDate>Sat, 17 Jun 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[Planned buses for June/July 2023:]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="planned-buses-for-junejuly-2023">Planned buses for June/July 2023:<a href="#planned-buses-for-junejuly-2023" class="hash-link" aria-label="Direct link to Planned buses for June/July 2023:" title="Direct link to Planned buses for June/July 2023:">​</a></h3><ul><li>D3RE</li><li>D3FE</li><li>ICRE</li><li>T3RE</li><li>T3FE</li><li>ICFE</li></ul><p><img loading="lazy" src="https://cdn.discordapp.com/attachments/939645508513841262/1119744218668212274/image.png" alt="DevPic" class="img_ev3q"></p>]]></content:encoded>
-            <category>Development</category>
-            <category>General</category>
-        </item>
     </channel>
 </rss>

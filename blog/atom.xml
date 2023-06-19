@@ -39,18 +39,4 @@
         <category label="Off-Topic" term="Off-Topic"/>
         <category label="General" term="General"/>
     </entry>
-    <entry>
-        <title type="html"><![CDATA[June/July Bus Plans]]></title>
-        <id>https://huxleysales.github.io/blog/busplans</id>
-        <link href="https://huxleysales.github.io/blog/busplans"/>
-        <updated>2023-06-17T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Planned buses for June/July 2023:]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="planned-buses-for-junejuly-2023">Planned buses for June/July 2023:<a href="#planned-buses-for-junejuly-2023" class="hash-link" aria-label="Direct link to Planned buses for June/July 2023:" title="Direct link to Planned buses for June/July 2023:">​</a></h3><ul><li>D3RE</li><li>D3FE</li><li>ICRE</li><li>T3RE</li><li>T3FE</li><li>ICFE</li></ul><p><img loading="lazy" src="https://cdn.discordapp.com/attachments/939645508513841262/1119744218668212274/image.png" alt="DevPic" class="img_ev3q"></p>]]></content>
-        <author>
-            <name>ladderson</name>
-            <uri>https://github.com/TheLadderson</uri>
-        </author>
-        <category label="Development" term="Development"/>
-        <category label="General" term="General"/>
-    </entry>
 </feed>
