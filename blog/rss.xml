@@ -4,20 +4,29 @@
         <title>Huxley Sales Blog</title>
         <link>https://huxleysales.github.io/blog</link>
         <description>Huxley Sales Blog</description>
-        <lastBuildDate>Thu, 26 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 18 Jun 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[Welcome]]></title>
-            <link>https://huxleysales.github.io/blog/welcome</link>
-            <guid>https://huxleysales.github.io/blog/welcome</guid>
-            <pubDate>Thu, 26 Aug 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></description>
-            <content:encoded><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p><p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p><p>Regular blog authors can be added to <code>authors.yml</code>.</p><p>The blog post date can be extracted from filenames, such as:</p><ul><li><code>2019-05-30-welcome.md</code></li><li><code>2019-05-30-welcome/index.md</code></li></ul><p>A blog post folder can be convenient to co-locate blog post images:</p><p><img loading="lazy" alt="Docusaurus Plushie" src="/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p><p>The blog supports tags as well!</p><p><strong>And if you don't want a blog</strong>: just delete this directory, and use <code>blog: false</code> in your Docusaurus config.</p>]]></content:encoded>
-            <category>facebook</category>
-            <category>hello</category>
-            <category>docusaurus</category>
+            <title><![CDATA[First ever blog!!]]></title>
+            <link>https://huxleysales.github.io/blog/firstblog</link>
+            <guid>https://huxleysales.github.io/blog/firstblog</guid>
+            <pubDate>Sun, 18 Jun 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[this is the first ever blog!]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="this-is-the-first-ever-blog">this is the first ever blog!<a href="#this-is-the-first-ever-blog" class="hash-link" aria-label="Direct link to this is the first ever blog!" title="Direct link to this is the first ever blog!">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="anyways-bye">Anyways bye!<a href="#anyways-bye" class="hash-link" aria-label="Direct link to Anyways bye!" title="Direct link to Anyways bye!">​</a></h3>]]></content:encoded>
+            <category>Off-Topic</category>
+            <category>General</category>
+        </item>
+        <item>
+            <title><![CDATA[June/July Bus Plans]]></title>
+            <link>https://huxleysales.github.io/blog/busplans</link>
+            <guid>https://huxleysales.github.io/blog/busplans</guid>
+            <pubDate>Sat, 17 Jun 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Planned buses for June/July 2023:]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="planned-buses-for-junejuly-2023">Planned buses for June/July 2023:<a href="#planned-buses-for-junejuly-2023" class="hash-link" aria-label="Direct link to Planned buses for June/July 2023:" title="Direct link to Planned buses for June/July 2023:">​</a></h3><ul><li>D3RE</li><li>D3FE</li><li>ICRE</li><li>T3RE</li><li>T3FE</li><li>ICFE</li></ul><p><img loading="lazy" src="https://cdn.discordapp.com/attachments/939645508513841262/1119744218668212274/image.png" alt="DevPic" class="img_ev3q"></p>]]></content:encoded>
+            <category>Development</category>
+            <category>General</category>
         </item>
     </channel>
 </rss>
