@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Huxley Sales',
-  tagline: 'Welcome to HUXLEY Sales! Huxley Sales is a sales group owned by lvstnick. Huxley Sales offers a variety of different types of Bus Parts produced by developers and sold in the group. We also offer many different buses here. Feel free to purchase anything. Remember to read out Terms and Regulations!',
+  tagline: 'Welcome to Huxley Sales. We are a ROBLOX sales group that sells Developer Assets mainly based on school buses. Huxley Sales offers many different buses and parts for customization. Feel free to check out our variety of different assets.',
   favicon: 'img/favicon.ico',
   
   customFields: {
@@ -216,13 +216,13 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Huxley Sales. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Huxley Sales.`,
       },
       announcementBar: {
         id: 'discord',
         content:
           '<strong> This documentation is in ongoing progress | Need help? <a href="https://discord.gg/yHH2cynGzD">Join our discord!</a></strong>',
-        // backgroundColor: '#131314',
+        // backgroundColor: '#ca9380',
         // textColor: '#25c2a0',
         isCloseable: false,
       },
