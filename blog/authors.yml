@@ -1,8 +1,8 @@
-octocat:
-  name: EXAMPLE octocat
-  title: Octocat
-  url: https://github.com/octocat
-  image_url: https://github.com/octocat.png
+lad:
+  name: ladderson
+  title: Huxley Co-Owner
+  url: https://github.com/TheLadderson
+  image_url: https://github.com/TheLadderson.png
 
 fisher:
   name: fisher
@@ -12,6 +12,24 @@ fisher:
 
 jake:
   name: jake
-  title: Huxley Co-Owner
+  title: Former Staff
   url: https://github.com/jake0477
   image_url: https://github.com/jake0477.png
+
+nick:
+  name: lvstnick
+  title: Huxley Owner
+  url: https://www.roblox.com/users/1589044357/profile
+  image_url: https://tr.rbxcdn.com/718ace6115dfe95eea63dd5a04c61cbb/150/150/AvatarHeadshot/Png
+
+yair:
+  name: yair
+  title: Developer
+  url: https://www.roblox.com/users/274323553/profile
+  image_url: https://tr.rbxcdn.com/a0d9bf52a79d0ec39e28140698f713d6/150/150/AvatarHeadshot/Png
+
+mystic:
+  name: mystic
+  title: Former Developer
+  url: https://www.roblox.com/users/972015545/profile
+  image_url: https://tr.rbxcdn.com/14d84dd43ed3af09b440673bd11901e8/150/150/AvatarHeadshot/Png
