@@ -2,11 +2,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huxleysales.github.io/blog</id>
     <title>Huxley Sales Blog</title>
-    <updated>2023-06-18T00:00:00.000Z</updated>
+    <updated>2023-06-19T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huxleysales.github.io/blog"/>
     <subtitle>Huxley Sales Blog</subtitle>
     <icon>https://huxleysales.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[???]]></title>
+        <id>https://huxleysales.github.io/blog/unknown</id>
+        <link href="https://huxleysales.github.io/blog/unknown"/>
+        <updated>2023-06-19T00:00:00.000Z</updated>
+        <author>
+            <name>yair</name>
+            <uri>https://www.roblox.com/users/274323553/profile</uri>
+        </author>
+        <category label="Random" term="Random"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[June/July Bus Plans]]></title>
         <id>https://huxleysales.github.io/blog/busplans</id>

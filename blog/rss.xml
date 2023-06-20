@@ -4,10 +4,17 @@
         <title>Huxley Sales Blog</title>
         <link>https://huxleysales.github.io/blog</link>
         <description>Huxley Sales Blog</description>
-        <lastBuildDate>Sun, 18 Jun 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 19 Jun 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[???]]></title>
+            <link>https://huxleysales.github.io/blog/unknown</link>
+            <guid>https://huxleysales.github.io/blog/unknown</guid>
+            <pubDate>Mon, 19 Jun 2023 00:00:00 GMT</pubDate>
+            <category>Random</category>
+        </item>
         <item>
             <title><![CDATA[June/July Bus Plans]]></title>
             <link>https://huxleysales.github.io/blog/busplans</link>
