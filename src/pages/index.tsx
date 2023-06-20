@@ -18,7 +18,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/buses">
-            Read the Bus Docs
+            Bus Documents
           </Link>
         </div>
       </div>
@@ -31,11 +31,11 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Home`}
-      description="Welcome to HUXLEY Sales! Huxley Sales is a sales group owned by lvstnick.">
+      description="Huxley Sales Official Site">
       <HomepageHeader />
       <main>
         <img src="/img/homepagebanner.png" className={clsx(styles.homepageBanner)}/>
-        <p className="hero__subtitle"><strong>Picture Credit:</strong> XIIMysticXII Southern Transportation Lines</p>
+        <p className="hero__subtitle"><strong>Picture Credit:</strong> Southern Transportation Lines</p>
       </main>
     </Layout>
   );
