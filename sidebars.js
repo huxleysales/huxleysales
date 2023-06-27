@@ -28,6 +28,17 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Customization',
+          link: {
+            type: 'generated-index',
+          },
+          collapsed: false,
+          items: [
+            'buses/customization/psi-guide'
+          ],
+        },
+        {
+          type: 'category',
           label: 'ROBLOX Studio Help',
           link: {
             type: 'generated-index',
