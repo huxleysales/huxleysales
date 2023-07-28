@@ -1,0 +1,26 @@
+---
+id: psi-guide
+title: Air Pressure Guide
+---
+
+**If you wish to disable this, set `BusSettings.PSI_Enabled` in the BusSettings script to `false`**
+
+## Information about Air Pressure (PSI)
+With the Air Pressure feature enabled, the bus has to reach **50 PSI in order to disable the parking brake.**
+If the PSI is below 50, a `LOW AIR PRESSURE` Pop-Up will appear.
+
+![Informational Pic](https://cdn.discordapp.com/attachments/1122983719792300163/1123072749817045012/image.png)
+
+If you are driving, and the PSI drops down to below 40, the parking brake will re-enable and the `LOW AIR PRESSURE` Pop-Up will re-appear again.
+
+## Ways Pressure is loss
+- Pressing the brakes (Pressing S)
+- Using the Parking Brake
+- Using a Air-Powered Service Door
+
+## Questions
+- **If my door is Electric, how do I disable the Pressure Loss on it?**
+The `Bus Settings` script has an option in it for Door Pressure Loss, if you want to disable Air Pressure Loss on the service door, set `BusSettings.PSI_ServiceDoor` to `false`.
+
+- **What will it be like if I disable it?**
+If you disable it, the bus will allow you to disable the parking brake without needing PSI, and you would be able to drive around. PSI is for realism, its your choice to disable it.
