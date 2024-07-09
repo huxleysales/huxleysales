@@ -35,7 +35,7 @@ export default function Home(): JSX.Element {
       <HomepageHeader />
       <main>
         <img src="/img/homepagebanner.png" className={clsx(styles.homepageBanner)}/>
-        <p className="hero__subtitle"><strong>Picture Credit:</strong> Southern Transportation Lines</p>
+        <p className="hero__subtitle"><strong>Property of</strong> HUXLEY Sales</p>
       </main>
     </Layout>
   );
