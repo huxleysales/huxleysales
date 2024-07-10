@@ -2,8 +2,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 require('dotenv').config();
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const { github, dracula } = require("prism-react-renderer").themes;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -40,16 +39,11 @@ const config = {
 
   plugins: [
     [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
-      {
-        indexDocs: true,
-        indexBlog: true,
-        indexPages: true,
-        language: "en",
-        maxSearchResults: 10,
-        // style:
-      }
-    ],
+			require.resolve("docusaurus-lunr-search"),
+			{
+				highlightResult: true,
+			},
+		],
       async function myPlugin(context, options) {
         return {
           name: "docusaurus-tailwindcss",
@@ -126,8 +120,13 @@ const config = {
           //   label: 'Docs',
           // },
           {
+            href: '/buses',
+            label: 'School Buses',
+            position: 'left'
+          },
+          {
             href: '/products', 
-            label: 'Products', 
+            label: 'Bus Products', 
             position: 'left'
           },
           {
@@ -227,8 +226,8 @@ const config = {
         isCloseable: false,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: github,
+        darkTheme: dracula,
         additionalLanguages: ['lua']
       },
     }),
