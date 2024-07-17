@@ -168,6 +168,7 @@ export default function BusStorePage({ bus }: BusStorePageProps) {
 
                             <div className="space-y-6">
                                 <p className="text-base text-gray-900 dark:text-gray-200">{bus.description}</p>
+                                <p className="text-base text-gray-900 dark:text-gray-200">This bus was released on {bus.released}</p>
                             </div>
                         </div>
 
