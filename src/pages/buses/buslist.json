@@ -6,7 +6,8 @@
         "type": "type-c", 
         "chassis": "hux-v",
         "price-category": "high",
-        "sales": 153
+        "sales": 153,
+        "released": "12/10/2023"
       },
       {
         "name": "Vision (2024)",
@@ -15,7 +16,8 @@
         "type": "type-c", 
         "chassis": "hux-v",
         "price-category": "high",
-        "sales": 29
+        "sales": 29,
+        "released": "10/08/2023"
       },
       {
         "name": "Vision (2022)",
@@ -24,7 +26,8 @@
         "type": "type-c", 
         "chassis": "hux-v",
         "price-category": "high",
-        "sales": 19
+        "sales": 19,
+        "released": "10/07/2023"
       },
       {
         "name": "Vision (2019)",
@@ -33,7 +36,8 @@
         "type": "type-c", 
         "chassis": "hux-v",
         "price-category": "high",
-        "sales": 48
+        "sales": 48,
+        "released": "10/06/2023"
       },
       {
         "name": "T3RE",
@@ -42,7 +46,8 @@
         "type": "type-d", 
         "chassis": "hux-v",
         "price-category": "high",
-        "sales": 25
+        "sales": 25,
+        "released": "08/07/2023"
       },
       {
         "name": "T3FE",
@@ -51,7 +56,28 @@
         "type": "type-d", 
         "chassis": "hux-v",
         "price-category": "high",
-        "sales": 26
+        "sales": 26,
+        "released": "07/23/2023"
+      },
+      {
+        "name": "ICRE",
+        "id": "icre",
+        "description": "A 3D Modeled School Bus based off of the IC Rear Engine Bus.",
+        "type": "type-d", 
+        "chassis": "hux-v",
+        "price-category": "high",
+        "sales": 29,
+        "released": "07/16/2023"
+      },
+      {
+        "name": "D3FE",
+        "id": "d3fe",
+        "description": "A 3D Modeled School Bus based off of the IC Rear Engine Bus.",
+        "type": "type-d", 
+        "chassis": "hux-v",
+        "price-category": "high",
+        "sales": 16,
+        "released": "06/24/2023"
       },
       {
         "name": "ICBE",
@@ -60,7 +86,8 @@
         "type": "type-b", 
         "chassis": "hux-v",
         "price-category": "low",
-        "sales": 37
+        "sales": 37,
+        "released": "06/04/2023"
       },
       {
         "name": "C2",
@@ -69,7 +96,8 @@
         "type": "type-c", 
         "chassis": "hux-v",
         "price-category": "high",
-        "sales": 122  
+        "sales": 122,
+        "released": "05/03/2023"
       },
       {
         "name": "ICAE",
@@ -78,7 +106,8 @@
         "type": "type-a", 
         "chassis": "hux-v",
         "price-category": "low",
-        "sales": 34
+        "sales": 34,
+        "released": "04/12/2023"
       },
       {
         "name": "SBCV",
@@ -87,16 +116,18 @@
         "type": "type-c", 
         "chassis": "hux-v",
         "price-category": "high",
-        "sales": 14
+        "sales": 14,
+        "released": "04/06/2023"
       },
       {
         "name": "EFX",
         "id": "efx",
         "description": "A 3D Modeled School Bus based off of the EFX Model Bus.",
         "type": "type-d", 
-        "chassis": "hux-v",
+        "chassis": "hux-iv",
         "price-category": "high",
-        "sales": 18
+        "sales": 18,
+        "released": "03/16/2023"
       },
       {
         "name": "Vision (2009)",
@@ -105,7 +136,8 @@
         "type": "type-c", 
         "chassis": "hux-v",
         "price-category": "high",
-        "sales": 26
+        "sales": 26,
+        "released": "03/25/2023"
       },
       {
         "name": "HDX",
@@ -114,7 +146,8 @@
         "type": "type-d", 
         "chassis": "hux-v",
         "price-category": "high",
-        "sales": 51
+        "sales": 51,
+        "released": "03/19/2023"
       },
       {
         "name": "ICCE (2004)",
@@ -123,7 +156,8 @@
         "type": "type-c", 
         "chassis": "hux-iv",
         "price-category": "high",
-        "sales": 14
+        "sales": 14,
+        "released": "12/10/2023"
       },
       {
         "name": "FS65",
@@ -132,7 +166,8 @@
         "type": "type-c", 
         "chassis": "hux-iv",
         "price-category": "high",
-        "sales": 44
+        "sales": 44,
+        "released": "08/25/2022"
       },
       {
         "name": "Microbird G5",
@@ -141,7 +176,8 @@
         "type": "type-a", 
         "chassis": "hux-iv",
         "price-category": "low",
-        "sales": 35
+        "sales": 35,
+        "released": "08/03/2022"
       },
       {
         "name": "Minotour",
@@ -150,6 +186,7 @@
         "type": "type-a", 
         "chassis": "hux-iii",
         "price-category": "low",
-        "sales": 46
+        "sales": 46,
+        "released": "06/09/2022"
       }
 ]
