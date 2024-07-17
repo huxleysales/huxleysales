@@ -64,7 +64,7 @@ export default function BusStorePage({ bus }: BusStorePageProps) {
 
                 {/* Image gallery */}
                 <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
-                    <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
+                    <div className="aspect-h-4 aspect-w-3 overflow-hidden rounded-lg lg:block">
                         <img
                             alt="Picture 1"
                             src={`/img/buses/${bus.id}/pic1.png`}

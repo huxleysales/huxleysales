@@ -162,10 +162,10 @@ export default function Buses() {
                 </form>
 
                 <div className="lg:col-span-3">
-                  <div className='grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4'>
+                  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4'>
                     {BusList.map(bus => (
-                      <a className="flex flex-col justify-center aspect-video drop-shadow-md min-h-[8rem] rounded-md border-4 border-zinc-900 cols-" href={`/buses/${bus.id}`} target="_blank" style={{ "textDecoration": "none" }}>
-                        <img src={`/img/buses/${bus.id}/pic1.png`} className="h-full absolute overflow-clip left-0 right-0 mx-auto rounded-md" />
+                      <a key={bus.id} className="flex flex-col justify-center aspect-video drop-shadow-md min-h-[8rem] rounded-md border-4 border-zinc-900 cols-" href={`/buses/${bus.id}`} target="_blank" style={{ "textDecoration": "none" }}>
+                        <img src={`/img/buses/${bus.id}/pic1.png`} className="h-full w-full absolute overflow-clip left-0 right-0 mx-auto rounded-md" />
                         <div className="z-10 flex flex-col rounded-md justify-end bg-gradient-to-t from-cyan-500 via-transparent to-transparent w-full h-full">
                           <span className="w-[100%] p-2 text-3xl font-black dark:text-gray-50 text-gray-950 text-center">{bus.name}</span>
                         </div>
