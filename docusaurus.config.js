@@ -1,5 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+import tailwindPlugin from "./tailwind-config.cjs";
 require('dotenv').config();
 
 const { github, dracula } = require("prism-react-renderer").themes;
@@ -9,7 +10,7 @@ const config = {
   title: 'Huxley Sales',
   tagline: 'Welcome to Huxley Sales. We are a ROBLOX sales group that sells Developer Assets mainly based on school buses. Huxley Sales offers many different buses and parts for customization. Feel free to check out our variety of different assets.',
   favicon: 'img/favicon.ico',
-  
+
   customFields: {
     hubSecret: process.env.HUB_SECRET_KEY
   },
@@ -39,22 +40,12 @@ const config = {
 
   plugins: [
     [
-			require.resolve("docusaurus-lunr-search"),
-			{
-				highlightResult: true,
-			},
-		],
-      async function myPlugin(context, options) {
-        return {
-          name: "docusaurus-tailwindcss",
-          configurePostCss(postcssOptions) {
-            // Appends TailwindCSS and AutoPrefixer.
-            postcssOptions.plugins.push(require("tailwindcss"));
-            postcssOptions.plugins.push(require("autoprefixer"));
-            return postcssOptions;
-          },
-        };
+      require.resolve("docusaurus-lunr-search"),
+      {
+        highlightResult: true,
       },
+    ],
+    tailwindPlugin
   ],
 
   presets: [
@@ -125,8 +116,8 @@ const config = {
             position: 'left'
           },
           {
-            href: '/products', 
-            label: 'Bus Products', 
+            href: '/products',
+            label: 'Bus Products',
             position: 'left'
           },
           {
@@ -147,8 +138,8 @@ const config = {
             ]
           },
           {
-            href: '/blog', 
-            label: 'Blog', 
+            href: '/blog',
+            label: 'Blog',
             position: 'left'
           },
           {
