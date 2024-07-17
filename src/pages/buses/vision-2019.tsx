@@ -2,7 +2,7 @@ import BusStorePage, { BusStorePageProps } from "@site/src/components/busStorePa
 import Layout from "@theme/Layout";
 import BusList from "./buslist.json";
 
-const bus = BusList.find(bus => bus.id === "vision-2019.tsx") as BusStorePageProps["bus"]
+const bus = BusList.find(bus => bus.id === "vision-2019") as BusStorePageProps["bus"]
 
 export default function BusPage() {
     return (
