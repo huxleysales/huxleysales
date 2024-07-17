@@ -1,0 +1,155 @@
+[
+    {
+        "name": "ICCE",
+        "id": "icce",
+        "description": "A 3D Modeled School Bus based off of the new CE Series.",
+        "type": "type-c", 
+        "chassis": "hux-v",
+        "price-category": "high",
+        "sales": 153
+      },
+      {
+        "name": "Vision (2024)",
+        "id": "vision-2024",
+        "description": "A 3D Modeled School Bus based off of the new 2024 Vision School Bus.",
+        "type": "type-c", 
+        "chassis": "hux-v",
+        "price-category": "high",
+        "sales": 29
+      },
+      {
+        "name": "Vision (2022)",
+        "id": "vision-2022",
+        "description": "A 3D Modeled School Bus based off of the 2022 Vision School Bus.",
+        "type": "type-c", 
+        "chassis": "hux-v",
+        "price-category": "high",
+        "sales": 19
+      },
+      {
+        "name": "Vision (2019)",
+        "id": "vision-2019",
+        "description": "A 3D Modeled School Bus based off of the 2019 Vision School Bus.",
+        "type": "type-c", 
+        "chassis": "hux-v",
+        "price-category": "high",
+        "sales": 48
+      },
+      {
+        "name": "T3RE",
+        "id": "t3re",
+        "description": "A 3D Modeled School Bus based off of the T3 Rear Engine Bus",
+        "type": "type-d", 
+        "chassis": "hux-v",
+        "price-category": "high",
+        "sales": 25
+      },
+      {
+        "name": "T3FE",
+        "id": "t3fe",
+        "description": "A 3D Modeled School Bus based off of the T3 Front Engine Bus",
+        "type": "type-d", 
+        "chassis": "hux-v",
+        "price-category": "high",
+        "sales": 26
+      },
+      {
+        "name": "ICBE",
+        "id": "icbe",
+        "description": "A 3D Modeled School Bus based off of the BE Model Bus.",
+        "type": "type-b", 
+        "chassis": "hux-v",
+        "price-category": "low",
+        "sales": 37
+      },
+      {
+        "name": "C2",
+        "id": "c2",
+        "description": "A 3D Modeled School Bus based off of the commonly seen C2.",
+        "type": "type-c", 
+        "chassis": "hux-v",
+        "price-category": "high",
+        "sales": 122  
+      },
+      {
+        "name": "ICAE",
+        "id": "icae",
+        "description": "A 3D Modeled School Bus based off of the AE Model Bus.",
+        "type": "type-a", 
+        "chassis": "hux-v",
+        "price-category": "low",
+        "sales": 34
+      },
+      {
+        "name": "SBCV",
+        "id": "sbcv",
+        "description": "A 3D Modeled School Bus based off of the old collaboration model between IC and BB",
+        "type": "type-c", 
+        "chassis": "hux-v",
+        "price-category": "high",
+        "sales": 14
+      },
+      {
+        "name": "EFX",
+        "id": "efx",
+        "description": "A 3D Modeled School Bus based off of the EFX Model Bus.",
+        "type": "type-d", 
+        "chassis": "hux-v",
+        "price-category": "high",
+        "sales": 18
+      },
+      {
+        "name": "Vision (2009)",
+        "id": "vision-2009",
+        "description": "A 3D Modeled School Bus based off of the 2009 Model of the Vision School Bus.",
+        "type": "type-c", 
+        "chassis": "hux-v",
+        "price-category": "high",
+        "sales": 26
+      },
+      {
+        "name": "HDX",
+        "id": "hdx",
+        "description": "A 3D Modeled School Bus based off of the HDX Model Bus.",
+        "type": "type-d", 
+        "chassis": "hux-v",
+        "price-category": "high",
+        "sales": 51
+      },
+      {
+        "name": "ICCE (2004)",
+        "id": "icce-2004",
+        "description": "A 3D Modeled School Bus based off of the old 2004 Model of the ICCE",
+        "type": "type-c", 
+        "chassis": "hux-iv",
+        "price-category": "high",
+        "sales": 14
+      },
+      {
+        "name": "FS65",
+        "id": "fs65",
+        "description": "A 3D Modeled School Bus based off of the old FS65",
+        "type": "type-c", 
+        "chassis": "hux-iv",
+        "price-category": "high",
+        "sales": 44
+      },
+      {
+        "name": "Microbird G5",
+        "id": "microbird-g5",
+        "description": "A 3D Modeled School Bus based off of the Type-A G5 School Bus.",
+        "type": "type-a", 
+        "chassis": "hux-iv",
+        "price-category": "low",
+        "sales": 35
+      },
+      {
+        "name": "Minotour",
+        "id": "minotour",
+        "description": "A 3D Modeled School Bus based off of the Type-A Minotour School Bus.",
+        "type": "type-a", 
+        "chassis": "hux-iii",
+        "price-category": "low",
+        "sales": 46
+      }
+]
