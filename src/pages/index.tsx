@@ -8,7 +8,7 @@ import Layout from '@theme/Layout';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -27,15 +27,15 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Home`}
       description="Huxley Sales Official Site">
       <HomepageHeader />
       <main>
-        <img src="/img/homepagebanner.png" className={clsx(styles.homepageBanner)}/>
-        <p className="hero__subtitle"><strong>Picture Credit:</strong> Southern Transportation Lines</p>
+        <img src="/img/homepagebanner.png" className={clsx(styles.homepageBanner)} />
+        {/* <p className="hero__subtitle"><strong>Picture Credit:</strong> Southern Transportation Lines</p> */}
       </main>
     </Layout>
   );
