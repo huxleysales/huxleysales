@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Huxley Sales Blog</title>
+        <link>https://huxleysales.github.io/blog</link>
+        <description>Huxley Sales Blog</description>
+        <lastBuildDate>Mon, 19 Jun 2023 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[???]]></title>
+            <link>https://huxleysales.github.io/blog/unknown</link>
+            <guid>https://huxleysales.github.io/blog/unknown</guid>
+            <pubDate>Mon, 19 Jun 2023 00:00:00 GMT</pubDate>
+            <category>Random</category>
+        </item>
+        <item>
+            <title><![CDATA[June/July Bus Plans]]></title>
+            <link>https://huxleysales.github.io/blog/busplans</link>
+            <guid>https://huxleysales.github.io/blog/busplans</guid>
+            <pubDate>Sun, 18 Jun 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Planned buses for June/July 2023:]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_UcM0" id="planned-buses-for-junejuly-2023">Planned buses for June/July 2023:<a class="hash-link" aria-label="Direct link to Planned buses for June/July 2023:" title="Direct link to Planned buses for June/July 2023:" href="https://huxleysales.github.io/blog/busplans#planned-buses-for-junejuly-2023">​</a></h3>
+<ul>
+<li>D3RE</li>
+<li>D3FE</li>
+<li>ICRE</li>
+<li>T3RE</li>
+<li>T3FE</li>
+<li>ICFE</li>
+</ul>
+<p><img decoding="async" loading="lazy" src="https://cdn.discordapp.com/attachments/939645508513841262/1119744218668212274/image.png" alt="DevPic" class="img_Aha3"></p>]]></content:encoded>
+            <category>Development</category>
+            <category>General</category>
+        </item>
+        <item>
+            <title><![CDATA[First ever blog!!]]></title>
+            <link>https://huxleysales.github.io/blog/firstblog</link>
+            <guid>https://huxleysales.github.io/blog/firstblog</guid>
+            <pubDate>Sun, 18 Jun 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[this is the first ever blog!]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_UcM0" id="this-is-the-first-ever-blog">this is the first ever blog!<a class="hash-link" aria-label="Direct link to this is the first ever blog!" title="Direct link to this is the first ever blog!" href="https://huxleysales.github.io/blog/firstblog#this-is-the-first-ever-blog">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_UcM0" id="anyways-bye">Anyways bye!<a class="hash-link" aria-label="Direct link to Anyways bye!" title="Direct link to Anyways bye!" href="https://huxleysales.github.io/blog/firstblog#anyways-bye">​</a></h3>]]></content:encoded>
+            <category>Off-Topic</category>
+            <category>General</category>
+        </item>
+    </channel>
+</rss>
